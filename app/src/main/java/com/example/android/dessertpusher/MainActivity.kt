@@ -27,6 +27,7 @@ import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleObserver
 import com.example.android.dessertpusher.databinding.ActivityMainBinding
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
@@ -149,9 +150,17 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onResume() {
+        super.onResume()
+        Timber.i("I just called the onResume Method")
+
+    }
+
     override fun onStart() {
         super.onStart()
-        Log.i("MainActivity", "I just called the onStart Method")
+//      Log.i("MainActivity", "I just called the onStart Method")
+        Timber.i("I just called the onStart Method")
+
 
     }
 // TODO (02) Override the onStart lifecycle method and add an info level log statement
