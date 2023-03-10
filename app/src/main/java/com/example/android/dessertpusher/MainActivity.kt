@@ -160,8 +160,25 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         super.onStart()
 //      Log.i("MainActivity", "I just called the onStart Method")
         Timber.i("I just called the onStart Method")
-
-
     }
-// TODO (02) Override the onStart lifecycle method and add an info level log statement
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("I just called the onPause Method")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("I just called the onDestroy Method")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("I just called the onRestart Method")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("I just called the onStop Method")
+    }
 }
